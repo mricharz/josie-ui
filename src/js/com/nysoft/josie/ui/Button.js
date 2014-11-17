@@ -1,8 +1,8 @@
-jQuery.require('com.nysoft.josie.core.Control');
-jQuery.require('css/com/nysoft/josie/ui.css', {dataType: 'stylesheet'});
+Josie.require('com.nysoft.josie.core.Control');
 
 com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Button', {
 	meta: {
+        type: {type: 'string', defaultValue: 'default' },
 		text: 'string',
 		icon: 'string',
 		click: 'function'
@@ -11,35 +11,32 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Button', {
 	_renderControl: function() {
 		this._super('_renderControl', arguments);
 		if(this.getDom()) {
-			this.getDom().addClass('button');
-			this.getDom().html('<span class="icon" /><span class="text" />');
+			this.getDom().addClass('btn');
 			this.getDom().click(jQuery.proxy(function(e) {
 				this.getClick().call(this, e);
 			}, this));
 		}
 	},
 	
-	setText: function(text) {
-		if(typeof text == 'string' || text == null) {
-			this.setProperty('text', text);
-			var oText = this.getDom().children('.text');
-			if(text) {
-				oText.show().text(text);
-			} else {
-				oText.hide();
-			}
+	setText: function(sText) {
+		if(typeof sText == 'string' || sText == null) {
+			this.setProperty('text', sText);
+			this.getDom().html(sText);
 		}
 	},
+
+    setType: function(sType) {
+        if(typeof sType == 'string' || sType == null) {
+            var sOldType = this.getProperty('type');
+            this.setProperty('type', sType);
+            this.getDom().removeClass('btn-'+sOldType).addClass('btn-'+sType);
+        }
+    },
 	
-	setIcon: function(icon) {
-		if(typeof icon == 'string' || icon == null) {
-			this.setProperty('icon', icon);
-			var oIcon = this.getDom().children('.icon');
-			if(icon) {
-				oIcon.show().html('<img src="'+icon+'" />');
-			} else {
-				oIcon.hide();
-			}
+	setIcon: function(sIcon) {
+		if(typeof sIcon == 'string' || sIcon == null) {
+			this.setProperty('icon', sIcon);
+            this.getDom().addClass(sIcon);
 		}
 	}
 });

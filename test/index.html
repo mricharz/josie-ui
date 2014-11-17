@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Josie-Core Tests</title>
+    <!-- Loading jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Loading Josie-Core -->
+    <script src="../node_modules/josie-core/src/js/core.js"></script>
+    <!-- Loading Bootstrap 3 CSS-Framework -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script>
+        //set debug logging
+        Josie.log.setLevel(Josie.log.level.All);
+        Josie.namespace('com.nysoft.josie.ui', '../src/js/com/nysoft/josie/ui');
+    </script>
+</head>
+<body>
+
+<div data-class="com.nysoft.josie.ui.Container">
+
+    <div data-class="com.nysoft.josie.ui.Heading" data-text="Headings"></div>
+
+    <div data-class="com.nysoft.josie.ui.Heading" data-text="h1 Heading" data-size="1"></div>
+    <div data-class="com.nysoft.josie.ui.Heading" data-text="h1 Heading" data-size="2"></div>
+    <div data-class="com.nysoft.josie.ui.Heading" data-text="h1 Heading" data-size="3"></div>
+    <div data-class="com.nysoft.josie.ui.Heading" data-text="h1 Heading" data-size="4"></div>
+    <div data-class="com.nysoft.josie.ui.Heading" data-text="h1 Heading" data-size="5"></div>
+    <div data-class="com.nysoft.josie.ui.Heading" data-text="h1 Heading" data-size="6"></div>
+    <div data-class="com.nysoft.josie.ui.Heading" data-text="h1 Heading" data-size="1" data-secondary-text="Secondary text"></div>
+    <div data-class="com.nysoft.josie.ui.Heading" data-text="h1 Heading" data-size="2" data-secondary-text="Secondary text"></div>
+    <div data-class="com.nysoft.josie.ui.Heading" data-text="h1 Heading" data-size="3" data-secondary-text="Secondary text"></div>
+    <div data-class="com.nysoft.josie.ui.Heading" data-text="h1 Heading" data-size="4" data-secondary-text="Secondary text"></div>
+    <div data-class="com.nysoft.josie.ui.Heading" data-text="h1 Heading" data-size="5" data-secondary-text="Secondary text"></div>
+    <div data-class="com.nysoft.josie.ui.Heading" data-text="h1 Heading" data-size="6" data-secondary-text="Secondary text"></div>
+
+    <div data-class="com.nysoft.josie.ui.Heading" data-text="Buttons"></div>
+
+    <div data-class="com.nysoft.josie.ui.Button" data-text="Default Button"></div>
+    <div data-class="com.nysoft.josie.ui.Button" data-text="Primary Button" data-type="primary"></div>
+    <div data-class="com.nysoft.josie.ui.Button" data-text="Success Button" data-type="success"></div>
+    <div data-class="com.nysoft.josie.ui.Button" data-text="Info Button" data-type="info"></div>
+    <div data-class="com.nysoft.josie.ui.Button" data-text="Warning Button" data-type="warning"></div>
+    <div data-class="com.nysoft.josie.ui.Button" data-text="Danger Button" data-type="danger"></div>
+    <div data-class="com.nysoft.josie.ui.Button" data-text="Link Button" data-type="link"></div>
+
+</div>
+
+</body>
+</html>
