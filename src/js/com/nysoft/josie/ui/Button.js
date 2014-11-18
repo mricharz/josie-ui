@@ -21,7 +21,9 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Button', {
 	setText: function(sText) {
 		if(typeof sText == 'string' || sText == null) {
 			this.setProperty('text', sText);
-			this.getDom().html(sText);
+            if(!sText)
+                sText = '';
+			this.getDom().text(sText);
 		}
 	},
 
@@ -36,7 +38,11 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Button', {
 	setIcon: function(sIcon) {
 		if(typeof sIcon == 'string' || sIcon == null) {
 			this.setProperty('icon', sIcon);
-            this.getDom().addClass(sIcon);
+            if(this.jqIcon) {
+                this.jqIcon.remove();
+            }
+            this.jqIcon = jQuery('<span class="'+sIcon+'" aria-hidden="true"></span>');
+            this.getDom().prepend(this.jqIcon);
 		}
 	}
 });
