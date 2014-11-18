@@ -1,8 +1,13 @@
 Josie.require('com.nysoft.josie.core.Control');
+Josie.require('com.nysoft.josie.ui.Button.Type');
+Josie.require('com.nysoft.josie.ui.Button.Size');
 
 com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Button', {
 	meta: {
-        type: {type: 'string', defaultValue: 'default' },
+        type: {type: 'string', defaultValue: com.nysoft.josie.ui.Button.Type.Default },
+        size: { type: 'string', defaultValue: com.nysoft.josie.ui.Button.Size.Default },
+        block: { type: 'boolean', defaultValue: false },
+        disabled: { type: 'boolean', defaultValue: false },
 		text: 'string',
 		icon: 'string',
 		click: 'function'
@@ -10,7 +15,10 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Button', {
 	
 	_renderControl: function() {
 		if(this.getDom()) {
-            var sText = this.getText(),
+            var bDisabled = this.getDisabled(),
+                bBlock = this.getBlock(),
+                sText = this.getText(),
+                sSize = this.getSize(),
                 sType = this.getType(),
                 sIcon = this.getIcon(),
                 sContent = '<div';
@@ -19,7 +27,17 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Button', {
             if(sType) {
                 this.addCssClass('btn-'+sType);
             }
+            if(sSize) {
+                this.addCssClass('btn-'+sSize);
+            }
+            if(bBlock) {
+                this.addCssClass('btn-block');
+            }
             sContent += this.writeCssClasses();
+
+            if(bDisabled) {
+                sContent += 'disabled="disabled"';
+            }
 
             sContent += '>';
             if(sIcon) {
@@ -37,6 +55,20 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Button', {
 		}
         this._super('_renderControl', arguments);
 	},
+
+    setDisabled: function(bDisabled) {
+        if(typeof bDisabled == 'boolean') {
+            this.setProperty('disabled', bDisabled);
+            this._renderControl();
+        }
+    },
+
+    setBlock: function(bBlock) {
+        if(typeof bBlock == 'boolean') {
+            this.setProperty('block', bBlock);
+            this._renderControl();
+        }
+    },
 	
 	setText: function(sText) {
 		if(typeof sText == 'string' || sText == null) {
@@ -47,8 +79,14 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Button', {
 
     setType: function(sType) {
         if(typeof sType == 'string' || sType == null) {
-            var sOldType = this.getProperty('type');
             this.setProperty('type', sType);
+            this._renderControl();
+        }
+    },
+
+    setSize: function(sSize) {
+        if(typeof sSize == 'string' || sSize == null) {
+            this.setProperty('size', sSize);
             this._renderControl();
         }
     },

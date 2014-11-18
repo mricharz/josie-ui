@@ -12,124 +12,206 @@
     <script>
         //set debug logging
         Josie.log.setLevel(Josie.log.level.All);
+        //set location to ui-lib to right path (other than core-lib)
         Josie.namespace('com.nysoft.josie.ui', '../src/js/com/nysoft/josie/ui');
+
+        //set an alias for ui-lib to easy access that namespace
+        Josie.alias('ui', 'com.nysoft.josie.ui');
     </script>
 </head>
 <body>
 
-<div data-class="com.nysoft.josie.ui.Container">
+<div data-class="ui.Container">
 
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="Josie-UI Package"></div>
+    <div data-class="ui.Heading" data-text="Josie-UI Package"></div>
 
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="Headings" data-size="2"></div>
+    <div data-class="ui.Heading" data-text="Headings" data-size="2"></div>
 
-    <div data-class="com.nysoft.josie.ui.Codeblock">
-        <div data-class="com.nysoft.josie.ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Heading&amp;quot; data-text=&amp;quot;Heading&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;"></div>
+    <div data-class="ui.Codeblock">
+        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Heading&amp;quot; data-text=&amp;quot;Heading&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;"></div>
     </div>
 
-    <div data-class="com.nysoft.josie.ui.Text" data-text="All HTML headings, <code>&amp;lt;h1&amp;gt;</code> through <code>&amp;lt;h6&amp;gt;</code>, are available. .h1 through .h6 classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline."></div>
+    <div data-class="ui.Text" data-text="All HTML headings, <code>&amp;lt;h1&amp;gt;</code> through <code>&amp;lt;h6&amp;gt;</code>, are available. .h1 through .h6 classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline."></div>
 
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="h1 Heading" data-size="1"></div>
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="h2 Heading" data-size="2"></div>
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="h3 Heading" data-size="3"></div>
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="h4 Heading" data-size="4"></div>
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="h5 Heading" data-size="5"></div>
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="h6 Heading" data-size="6"></div>
+    <div data-class="ui.Heading" data-text="h1 Heading" data-size="1"></div>
+    <div data-class="ui.Heading" data-text="h2 Heading" data-size="2"></div>
+    <div data-class="ui.Heading" data-text="h3 Heading" data-size="3"></div>
+    <div data-class="ui.Heading" data-text="h4 Heading" data-size="4"></div>
+    <div data-class="ui.Heading" data-text="h5 Heading" data-size="5"></div>
+    <div data-class="ui.Heading" data-text="h6 Heading" data-size="6"></div>
 
-    <div data-class="com.nysoft.josie.ui.Codeblock">
-        <div data-class="com.nysoft.josie.ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Heading&amp;quot; data-text=&amp;quot;Heading&amp;quot; data-secondary-text=&amp;quot;Secondary text&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;"></div>
+    <div data-class="ui.Codeblock">
+        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Heading&amp;quot; data-text=&amp;quot;Heading&amp;quot; data-secondary-text=&amp;quot;Secondary text&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;"></div>
     </div>
 
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="h1 Heading" data-size="1" data-secondary-text="Secondary text"></div>
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="h2 Heading" data-size="2" data-secondary-text="Secondary text"></div>
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="h3 Heading" data-size="3" data-secondary-text="Secondary text"></div>
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="h4 Heading" data-size="4" data-secondary-text="Secondary text"></div>
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="h5 Heading" data-size="5" data-secondary-text="Secondary text"></div>
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="h6 Heading" data-size="6" data-secondary-text="Secondary text"></div>
+    <div data-class="ui.Heading" data-text="h1 Heading" data-size="1" data-secondary-text="Secondary text"></div>
+    <div data-class="ui.Heading" data-text="h2 Heading" data-size="2" data-secondary-text="Secondary text"></div>
+    <div data-class="ui.Heading" data-text="h3 Heading" data-size="3" data-secondary-text="Secondary text"></div>
+    <div data-class="ui.Heading" data-text="h4 Heading" data-size="4" data-secondary-text="Secondary text"></div>
+    <div data-class="ui.Heading" data-text="h5 Heading" data-size="5" data-secondary-text="Secondary text"></div>
+    <div data-class="ui.Heading" data-text="h6 Heading" data-size="6" data-secondary-text="Secondary text"></div>
 
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="Buttons" data-size="2"></div>
+    <div data-class="ui.Heading" data-text="Buttons" data-size="2"></div>
 
-    <div data-class="com.nysoft.josie.ui.Codeblock">
-        <div data-class="com.nysoft.josie.ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Button&amp;quot; data-text=&amp;quot;Buttontext&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;"></div>
+    <div data-class="ui.Codeblock">
+        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Button&amp;quot; data-text=&amp;quot;Buttontext&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;"></div>
     </div>
 
-    <div data-class="com.nysoft.josie.ui.Button" data-text="Default Button"></div>
-    <div data-class="com.nysoft.josie.ui.Button" data-text="Primary Button" data-type="primary"></div>
-    <div data-class="com.nysoft.josie.ui.Button" data-text="Success Button" data-type="success"></div>
-    <div data-class="com.nysoft.josie.ui.Button" data-text="Info Button" data-type="info"></div>
-    <div data-class="com.nysoft.josie.ui.Button" data-text="Warning Button" data-type="warning"></div>
-    <div data-class="com.nysoft.josie.ui.Button" data-text="Danger Button" data-type="danger"></div>
-    <div data-class="com.nysoft.josie.ui.Button" data-text="Link Button" data-type="link"></div>
+    <div data-class="ui.Button" data-text="Default Button"></div>
+    <div data-class="ui.Button" data-text="Primary Button" data-type="ui.Button.Type.Primary"></div>
+    <div data-class="ui.Button" data-text="Success Button" data-type="ui.Button.Type.Success"></div>
+    <div data-class="ui.Button" data-text="Info Button" data-type="ui.Button.Type.Info"></div>
+    <div data-class="ui.Button" data-text="Warning Button" data-type="ui.Button.Type.Warning"></div>
+    <div data-class="ui.Button" data-text="Danger Button" data-type="ui.Button.Type.Danger"></div>
+    <div data-class="ui.Button" data-text="Link Button" data-type="ui.Button.Type.Link"></div>
 
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="Buttons with icons" data-size="3"></div>
+    <div data-class="ui.Heading" data-text="Disabled Buttons" data-size="3"></div>
 
-    <div data-class="com.nysoft.josie.ui.Button" data-icon="glyphicon glyphicon-star" data-text="Default Button"></div>
-    <div data-class="com.nysoft.josie.ui.Button" data-icon="glyphicon glyphicon-star" data-text="Primary Button" data-type="primary"></div>
-    <div data-class="com.nysoft.josie.ui.Button" data-icon="glyphicon glyphicon-star" data-text="Success Button" data-type="success"></div>
-    <div data-class="com.nysoft.josie.ui.Button" data-icon="glyphicon glyphicon-star" data-text="Info Button" data-type="info"></div>
-    <div data-class="com.nysoft.josie.ui.Button" data-icon="glyphicon glyphicon-star" data-text="Warning Button" data-type="warning"></div>
-    <div data-class="com.nysoft.josie.ui.Button" data-icon="glyphicon glyphicon-star" data-text="Danger Button" data-type="danger"></div>
-    <div data-class="com.nysoft.josie.ui.Button" data-icon="glyphicon glyphicon-star" data-text="Link Button" data-type="link"></div>
-    <div data-class="com.nysoft.josie.ui.Button" data-icon="glyphicon glyphicon-star"></div>
+    <div data-class="ui.Button" data-text="Default Button" data-disabled="true"></div>
+    <div data-class="ui.Button" data-text="Primary Button" data-disabled="true" data-type="ui.Button.Type.Primary"></div>
+    <div data-class="ui.Button" data-text="Success Button" data-disabled="true" data-type="ui.Button.Type.Success"></div>
+    <div data-class="ui.Button" data-text="Info Button" data-disabled="true" data-type="ui.Button.Type.Info"></div>
+    <div data-class="ui.Button" data-text="Warning Button" data-disabled="true" data-type="ui.Button.Type.Warning"></div>
+    <div data-class="ui.Button" data-text="Danger Button" data-disabled="true" data-type="ui.Button.Type.Danger"></div>
+    <div data-class="ui.Button" data-text="Link Button" data-disabled="true" data-type="ui.Button.Type.Link"></div>
 
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="ButtonGroup" data-size="3"></div>
+    <div data-class="ui.Heading" data-text="Buttons with icons" data-size="3"></div>
 
-    <div data-class="com.nysoft.josie.ui.ButtonGroup">
-        <div data-class="com.nysoft.josie.ui.Button" data-text="1"></div>
-        <div data-class="com.nysoft.josie.ui.Button" data-text="2"></div>
-        <div data-class="com.nysoft.josie.ui.Button" data-text="3"></div>
-        <div data-class="com.nysoft.josie.ui.Button" data-text="4"></div>
+    <div data-class="ui.Button" data-icon="glyphicon glyphicon-star" data-text="Default Button"></div>
+    <div data-class="ui.Button" data-icon="glyphicon glyphicon-star" data-text="Primary Button" data-type="ui.Button.Type.Primary"></div>
+    <div data-class="ui.Button" data-icon="glyphicon glyphicon-star" data-text="Success Button" data-type="ui.Button.Type.Success"></div>
+    <div data-class="ui.Button" data-icon="glyphicon glyphicon-star" data-text="Info Button" data-type="ui.Button.Type.Info"></div>
+    <div data-class="ui.Button" data-icon="glyphicon glyphicon-star" data-text="Warning Button" data-type="ui.Button.Type.Warning"></div>
+    <div data-class="ui.Button" data-icon="glyphicon glyphicon-star" data-text="Danger Button" data-type="ui.Button.Type.Danger"></div>
+    <div data-class="ui.Button" data-icon="glyphicon glyphicon-star" data-text="Link Button" data-type="ui.Button.Type.Link"></div>
+    <div data-class="ui.Button" data-icon="glyphicon glyphicon-star"></div>
+
+    <div data-class="ui.Heading" data-text="Different sizes" data-size="3"></div>
+
+    <div data-class="ui.Button" data-text="Large Button" data-size="ui.Button.Size.Large"></div>
+    <div data-class="ui.Button" data-text="Default Button" data-size="ui.Button.Size.Default"></div>
+    <div data-class="ui.Button" data-text="Small Button" data-size="ui.Button.Size.Small"></div>
+    <div data-class="ui.Button" data-text="ExtraSmall Button" data-size="ui.Button.Size.ExtraSmall"></div>
+
+    <div data-class="ui.Heading" data-text="Block Buttons" data-size="3"></div>
+
+    <div data-class="ui.Button" data-text="Primary Button" data-block="true" data-type="ui.Button.Type.Primary"></div>
+    <div data-class="ui.Button" data-text="Success Button" data-block="true" data-type="ui.Button.Type.Success"></div>
+
+    <div data-class="ui.Heading" data-text="ButtonGroup" data-size="2"></div>
+
+    <div data-class="ui.Codeblock">
+        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.ButtonGroup&amp;quot;&amp;gt;Your buttons in here&amp;lt;/div&amp;gt;"></div>
     </div>
 
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="Texts" data-size="2"></div>
-
-    <div data-class="com.nysoft.josie.ui.Codeblock">
-        <div data-class="com.nysoft.josie.ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Text&amp;quot; data-text=&amp;quot;Your text&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;"></div>
+    <div data-class="ui.ButtonGroup">
+        <div data-class="ui.Button" data-text="1"></div>
+        <div data-class="ui.Button" data-text="2"></div>
+        <div data-class="ui.Button" data-text="3"></div>
+        <div data-class="ui.Button" data-text="4"></div>
     </div>
 
-    <div data-class="com.nysoft.josie.ui.Text" data-lead="true" data-text="Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus."></div>
-    <div data-class="com.nysoft.josie.ui.Text" data-text="Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus."></div>
+    <div data-class="ui.Text" data-text="or vertical"></div>
 
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="Alignments" data-size="3"></div>
-
-    <div data-class="com.nysoft.josie.ui.Text" data-alignment="left" data-text="Left alignment"></div>
-    <div data-class="com.nysoft.josie.ui.Text" data-alignment="center" data-text="Center alignment"></div>
-    <div data-class="com.nysoft.josie.ui.Text" data-alignment="right" data-text="Right alignment"></div>
-    <div data-class="com.nysoft.josie.ui.Text" data-alignment="justify" data-text="Justified text"></div>
-    <div data-class="com.nysoft.josie.ui.Text" data-alignment="nowrap" data-text="No wrap text"></div>
-
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="Transformations" data-size="3"></div>
-
-    <div data-class="com.nysoft.josie.ui.Text" data-transformation="lowercase" data-text="Lowercase transformation"></div>
-    <div data-class="com.nysoft.josie.ui.Text" data-transformation="uppercase" data-text="Uppercase transformation"></div>
-    <div data-class="com.nysoft.josie.ui.Text" data-transformation="capitalize" data-text="capitalize transformation"></div>
-
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="Blockquotes & Codeblocks" data-size="2"></div>
-
-    <div data-class="com.nysoft.josie.ui.Text" data-text="You can also create Blockquotes and Codeblocks"></div>
-
-    <div data-class="com.nysoft.josie.ui.Codeblock">
-        <div data-class="com.nysoft.josie.ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Codeblock&amp;quot;&amp;gt;Your code as content in here&amp;lt;/div&amp;gt;"></div>
-        <div data-class="com.nysoft.josie.ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Blockquote&amp;quot;&amp;gt;Your blockquote as content in here&amp;lt;/div&amp;gt;"></div>
+    <div data-class="ui.ButtonGroup" data-vertical="true">
+        <div data-class="ui.Button" data-text="1"></div>
+        <div data-class="ui.Button" data-text="2"></div>
+        <div data-class="ui.Button" data-text="3"></div>
+        <div data-class="ui.Button" data-text="4"></div>
     </div>
 
-    <div data-class="com.nysoft.josie.ui.Blockquote">
-        <div data-class="com.nysoft.josie.ui.Text" data-text="Example Blockquote"></div>
+    <div data-class="ui.Text" data-text="or nested as toolbar"></div>
+
+    <div data-class="ui.ButtonGroup" data-toolbar="true">
+        <div data-class="ui.ButtonGroup">
+            <div data-class="ui.Button" data-text="1"></div>
+            <div data-class="ui.Button" data-text="2"></div>
+        </div>
+        <div data-class="ui.ButtonGroup">
+            <div data-class="ui.Button" data-text="3"></div>
+            <div data-class="ui.Button" data-text="4"></div>
+        </div>
+        <div data-class="ui.ButtonGroup">
+            <div data-class="ui.Button" data-text="5"></div>
+        </div>
     </div>
 
-    <div data-class="com.nysoft.josie.ui.Heading" data-text="Images" data-size="2"></div>
+    <div data-class="ui.Text" data-text="and you can justify them"></div>
 
-    <div data-class="com.nysoft.josie.ui.Codeblock">
-        <div data-class="com.nysoft.josie.ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Image&amp;quot; data-src=&amp;quot;http://dummyimage.com/150x150/999/fff&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;"></div>
+    <div data-class="ui.ButtonGroup" data-justified="true">
+        <div data-class="ui.Button" data-text="1"></div>
+        <div data-class="ui.Button" data-text="2"></div>
+        <div data-class="ui.Button" data-text="3"></div>
+        <div data-class="ui.Button" data-text="4"></div>
+        <div data-class="ui.Button" data-text="5"></div>
     </div>
 
-    <div data-class="com.nysoft.josie.ui.Image" data-src="http://dummyimage.com/150x150/999/ffffff&text=Default+Image"></div>
-    <div data-class="com.nysoft.josie.ui.Image" data-responsive="true" data-src="http://dummyimage.com/150x150/999/ffffff&text=Responsive+Image"></div>
-    <div data-class="com.nysoft.josie.ui.Image" data-type="rounded" data-src="http://dummyimage.com/150x150/999/ffffff&text=Rounded+Image"></div>
-    <div data-class="com.nysoft.josie.ui.Image" data-type="circle" data-src="http://dummyimage.com/150x150/999/ffffff&text=Circle+Image"></div>
-    <div data-class="com.nysoft.josie.ui.Image" data-type="thumbnail" data-src="http://dummyimage.com/150x150/999/ffffff&text=Thumbnail+Image"></div>
+
+    <div data-class="ui.Heading" data-text="Texts" data-size="2"></div>
+
+    <div data-class="ui.Codeblock">
+        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Text&amp;quot; data-text=&amp;quot;Your text&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;"></div>
+    </div>
+
+    <div data-class="ui.Text" data-text="Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus."></div>
+
+    <div data-class="ui.Heading" data-text="Leading Text" data-size="3"></div>
+
+    <div data-class="ui.Text" data-lead="true" data-text="Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus."></div>
+
+    <div data-class="ui.Heading" data-text="Alignments" data-size="3"></div>
+
+    <div data-class="ui.Text" data-alignment="left" data-text="Left alignment"></div>
+    <div data-class="ui.Text" data-alignment="center" data-text="Center alignment"></div>
+    <div data-class="ui.Text" data-alignment="right" data-text="Right alignment"></div>
+    <div data-class="ui.Text" data-alignment="justify" data-text="Justified text"></div>
+    <div data-class="ui.Text" data-alignment="nowrap" data-text="No wrap text"></div>
+
+    <div data-class="ui.Heading" data-text="Transformations" data-size="3"></div>
+
+    <div data-class="ui.Text" data-transformation="lowercase" data-text="Lowercase transformation"></div>
+    <div data-class="ui.Text" data-transformation="uppercase" data-text="Uppercase transformation"></div>
+    <div data-class="ui.Text" data-transformation="capitalize" data-text="capitalize transformation"></div>
+
+    <div data-class="ui.Heading" data-text="Blockquotes & Codeblocks" data-size="2"></div>
+
+    <div data-class="ui.Text" data-text="You can also create Blockquotes and Codeblocks"></div>
+
+    <div data-class="ui.Codeblock">
+        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Codeblock&amp;quot;&amp;gt;Your code as content in here&amp;lt;/div&amp;gt;"></div>
+        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Blockquote&amp;quot;&amp;gt;Your blockquote as content in here&amp;lt;/div&amp;gt;"></div>
+    </div>
+
+    <div data-class="ui.Blockquote">
+        <div data-class="ui.Text" data-text="Example Blockquote"></div>
+    </div>
+
+    <div data-class="ui.Heading" data-text="Images" data-size="2"></div>
+
+    <div data-class="ui.Codeblock">
+        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Image&amp;quot; data-src=&amp;quot;http://dummyimage.com/150x150/999/fff&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;"></div>
+    </div>
+
+    <div data-class="ui.Image" data-src="http://dummyimage.com/150x150/999/ffffff&text=Default+Image"></div>
+    <div data-class="ui.Image" data-responsive="true" data-src="http://dummyimage.com/150x150/999/ffffff&text=Responsive+Image"></div>
+    <div data-class="ui.Image" data-type="rounded" data-src="http://dummyimage.com/150x150/999/ffffff&text=Rounded+Image"></div>
+    <div data-class="ui.Image" data-type="circle" data-src="http://dummyimage.com/150x150/999/ffffff&text=Circle+Image"></div>
+    <div data-class="ui.Image" data-type="thumbnail" data-src="http://dummyimage.com/150x150/999/ffffff&text=Thumbnail+Image"></div>
+
+    <div data-class="ui.Heading" data-text="Forms" data-size="2"></div>
+
+    <div data-class="ui.Codeblock">
+        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.TextField&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;"></div>
+    </div>
+
+    <div data-class="ui.TextField" data-placeholder="Normal TextField"></div>
+    <div data-class="ui.TextField" data-type="ui.TextField.Type.Email" data-placeholder="Email TextField"></div>
+    <div data-class="ui.TextField" data-type="ui.TextField.Type.Password" data-placeholder="Password TextField"></div>
+    <div data-class="ui.TextField" data-type="ui.TextField.Type.File"></div>
 
 </div>
+
+<br />
 
 </body>
 </html>
