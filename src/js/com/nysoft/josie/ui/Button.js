@@ -9,13 +9,13 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Button', {
 	},
 	
 	_renderControl: function() {
-		this._super('_renderControl', arguments);
 		if(this.getDom()) {
 			this.getDom().addClass('btn');
 			this.getDom().click(jQuery.proxy(function(e) {
 				this.getClick().call(this, e);
 			}, this));
 		}
+        this._super('_renderControl', arguments);
 	},
 	
 	setText: function(sText) {

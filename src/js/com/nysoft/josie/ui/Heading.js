@@ -8,7 +8,6 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Heading', {
     },
 
     _renderControl: function() {
-        this._super('_renderControl', arguments);
         if(this.getDom()) {
             var iSize = this.getSize(),
                 sSecondaryText = this.getSecondaryText(),
@@ -18,8 +17,9 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Heading', {
                 sContent += ' <small>'+sSecondaryText+'</small>';
             }
             sContent += '</h'+iSize+'>';
-            this.getDom().replaceWith(sContent);
+            this.replaceDom(sContent);
         }
+        this._super('_renderControl', arguments);
     },
 
     setSize: function(iSize) {
