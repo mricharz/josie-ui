@@ -64,40 +64,6 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.TextField', {
             }, this));
         }
         this._super('_renderControl', arguments);
-    },
-
-    setDisabled: function(bDisabled) {
-        if(typeof bDisabled == 'boolean') {
-            this.setProperty('disabled', bDisabled);
-            this._renderControl();
-        }
-    },
-
-    setType: function(sType) {
-        if(typeof sType == 'string' || sType == null) {
-            this.setProperty('type', sType);
-            this._renderControl();
-        }
-    },
-
-    setLabel: function(sLabel) {
-        if(typeof sLabel == 'string' || sLabel == null) {
-            this.setProperty('label', sLabel);
-            this._renderControl();
-        }
-    },
-
-    setPlaceholder: function(sPlaceholder) {
-        if(typeof sPlaceholder == 'string' || sPlaceholder == null) {
-            this.setProperty('placeholder', sPlaceholder);
-            this._renderControl();
-        }
-    },
-
-    setName: function(sName) {
-        if(typeof sName == 'string' || sName == null) {
-            this.setProperty('name', sName);
-            this._renderControl();
-        }
     }
+
 });

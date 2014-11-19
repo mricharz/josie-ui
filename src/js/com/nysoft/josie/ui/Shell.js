@@ -1,10 +1,10 @@
-jQuery.require('com.nysoft.josie.core.Control');
+jQuery.require('com.nysoft.josie.ui.Container');
 jQuery.require('com.nysoft.josie.networking.VirtualProtocolSocket');
 jQuery.require('com.nysoft.josie.ui.Button');
 jQuery.require('com.nysoft.josie.user.User');
 jQuery.require('css/com/nysoft/josie/ui.css', {dataType: 'stylesheet'});
 
-com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Shell', {
+com.nysoft.josie.ui.Container.extend('com.nysoft.josie.ui.Shell', {
 	meta: {
 		user: 'object',
 		socketConnection: 'object',

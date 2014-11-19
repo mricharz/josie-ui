@@ -37,33 +37,6 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Text', {
             }, this));
         }
         this._super('_renderControl', arguments);
-    },
-
-    setText: function(sText) {
-        if(typeof sText == 'string' || sText == null) {
-            this.setProperty('text', sText);
-            this._renderControl();
-        }
-    },
-
-    setLead: function(bLead) {
-        if(typeof bLead == 'boolean') {
-            this.setProperty('lead', bLead);
-            this._renderControl();
-        }
-    },
-
-    setAlignment: function(sAlignment) {
-        if(typeof sAlignment == 'string' || sAlignment == null) {
-            this.setProperty('alignment', sAlignment);
-            this._renderControl();
-        }
-    },
-
-    setTransformation: function(sTransformation) {
-        if(typeof sTransformation == 'string' || sTransformation == null) {
-            this.setProperty('transformation', sTransformation);
-            this._renderControl();
-        }
     }
+
 });

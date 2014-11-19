@@ -37,13 +37,6 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.ButtonGroup', {
         this._super('_renderControl', arguments);
     },
 
-    setContent: function(aObjects) {
-        if(typeof aObjects == 'object') {
-            this.setProperty('content', aObjects);
-            this._renderContent();
-        }
-    },
-
     _renderContent: function() {
         var aObjects = this.getContent();
         if(typeof aObjects == 'object') {

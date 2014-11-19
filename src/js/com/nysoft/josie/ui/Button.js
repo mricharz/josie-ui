@@ -4,7 +4,7 @@ Josie.require('com.nysoft.josie.ui.Button.Size');
 
 com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Button', {
 	meta: {
-        type: {type: 'string', defaultValue: com.nysoft.josie.ui.Button.Type.Default },
+        type: { type: 'string', defaultValue: com.nysoft.josie.ui.Button.Type.Default },
         size: { type: 'string', defaultValue: com.nysoft.josie.ui.Button.Size.Default },
         block: { type: 'boolean', defaultValue: false },
         disabled: { type: 'boolean', defaultValue: false },
@@ -22,6 +22,8 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Button', {
                 sType = this.getType(),
                 sIcon = this.getIcon(),
                 sContent = '<div';
+
+            console.log(sType);
 
             this.addCssClass('btn');
             if(sType) {
@@ -54,47 +56,6 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Button', {
 			}, this));
 		}
         this._super('_renderControl', arguments);
-	},
-
-    setDisabled: function(bDisabled) {
-        if(typeof bDisabled == 'boolean') {
-            this.setProperty('disabled', bDisabled);
-            this._renderControl();
-        }
-    },
-
-    setBlock: function(bBlock) {
-        if(typeof bBlock == 'boolean') {
-            this.setProperty('block', bBlock);
-            this._renderControl();
-        }
-    },
-	
-	setText: function(sText) {
-		if(typeof sText == 'string' || sText == null) {
-			this.setProperty('text', sText);
-            this._renderControl();
-		}
-	},
-
-    setType: function(sType) {
-        if(typeof sType == 'string' || sType == null) {
-            this.setProperty('type', sType);
-            this._renderControl();
-        }
-    },
-
-    setSize: function(sSize) {
-        if(typeof sSize == 'string' || sSize == null) {
-            this.setProperty('size', sSize);
-            this._renderControl();
-        }
-    },
-	
-	setIcon: function(sIcon) {
-		if(typeof sIcon == 'string' || sIcon == null) {
-			this.setProperty('icon', sIcon);
-            this._renderControl();
-		}
 	}
+
 });
