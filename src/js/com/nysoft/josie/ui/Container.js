@@ -29,9 +29,11 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Container', {
             if(aObjects.length > 0) {
                 Josie.utils.each(aObjects, function(oObject) {
                     dom.append(oObject.getDom());
+                    oObject.invalidate();
                 });
             } else {
                 dom.append(aObjects.getDom());
+                aObjects.invalidate();
             }
         }
     }

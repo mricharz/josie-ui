@@ -59,9 +59,9 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.DropDown', {
 
             this.replaceDom(sContent);
             this._renderContent();
-            this.getDom().click(jQuery.proxy(function(e) {
-                this.getClick().call(this, e);
-            }, this));
+            this.getDom().click(function(){
+               console.log('hä');
+            });
         }
         this._super('_renderControl', arguments);
     },
@@ -81,6 +81,25 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.DropDown', {
                 aObjects._renderControl();
             }
         }
+    },
+
+    toggle: function() {
+        if(this.getDom().hasClass('open')) {
+            this.close();
+        } else {
+            this.open();
+        }
+    },
+
+    open: function() {
+        var jqDom = this.getDom();
+        if(!jqDom.hasClass('open')) {
+            jqDom.addClass('open');
+        }
+    },
+
+    close: function() {
+        this.getDom().removeClass('open');
     }
 
 });

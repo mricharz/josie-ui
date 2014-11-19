@@ -23,8 +23,6 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Button', {
                 sIcon = this.getIcon(),
                 sContent = '<div';
 
-            console.log(sType);
-
             this.addCssClass('btn');
             if(sType) {
                 this.addCssClass('btn-'+sType);
@@ -51,9 +49,6 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Button', {
             sContent += '</div>';
 
             this.replaceDom(sContent);
-			this.getDom().click(jQuery.proxy(function(e) {
-				this.getClick().call(this, e);
-			}, this));
 		}
         this._super('_renderControl', arguments);
 	}

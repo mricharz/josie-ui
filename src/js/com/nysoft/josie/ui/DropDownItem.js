@@ -29,9 +29,6 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.DropDownItem', {
             sContent += '</li>';
 
             this.replaceDom(sContent);
-            this.getDom().click(jQuery.proxy(function(e) {
-                this.getClick().call(this, e);
-            }, this));
         }
         this._super('_renderControl', arguments);
     }
