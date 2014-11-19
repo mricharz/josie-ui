@@ -9,9 +9,10 @@
     <script src="../node_modules/josie-core/src/js/core.js"></script>
     <!-- Loading Bootstrap 3 CSS-Framework -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script>
         //set debug logging
-        Josie.log.setLevel(Josie.log.level.Warning);
+        Josie.log.setLevel(Josie.log.level.Debug);
         //set location to ui-lib to right path (other than core-lib)
         Josie.namespace('com.nysoft.josie.ui', '../src/js/com/nysoft/josie/ui');
 
@@ -24,6 +25,8 @@
 <div data-class="ui.Container">
 
     <div data-class="ui.Heading" data-text="Josie-UI Package"></div>
+
+    <div data-class="ui.Text" data-text="Using bootstrap 3.3.1"></div>
 
     <div data-class="ui.Heading" data-text="Headings" data-size="2"></div>
 

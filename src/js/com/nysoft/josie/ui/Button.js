@@ -49,8 +49,20 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Button', {
             sContent += '</div>';
 
             this.replaceDom(sContent);
+            this._bindEvents();
 		}
         this._super('_renderControl', arguments);
-	}
+	},
+
+    _bindEvents: function() {
+        //bind global control events
+        var jqDom = this.getDom();
+        jqDom.click(jQuery.proxy(function(){
+            this.trigger('onClick');
+        }, this));
+        jqDom.dblclick(jQuery.proxy(function(){
+            this.trigger('onDblClick');
+        }, this));
+    }
 
 });
