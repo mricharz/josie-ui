@@ -11,6 +11,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Text', {
     _renderControl: function() {
         if(this.getDom()) {
             var bLead = this.getLead(),
+                sText = this.getText(),
                 sAlignment =  this.getAlignment(),
                 sTransformation = this.getTransformation(),
                 sContent = '<p';
@@ -27,7 +28,9 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Text', {
             sContent += this.writeCssClasses();
 
             sContent += '>';
-            sContent += this.getText();
+            if(sText) {
+                sContent += sText;
+            }
             sContent += '</p>';
 
             this.replaceDom(sContent);

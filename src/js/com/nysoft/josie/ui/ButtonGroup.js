@@ -32,25 +32,8 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.ButtonGroup', {
             sContent += 'role="group"';
             sContent += '></div>';
             this.replaceDom(sContent);
-            this._renderContent();
         }
         this._super('_renderControl', arguments);
-    },
-
-    _renderContent: function() {
-        var aObjects = this.getContent();
-        if(typeof aObjects == 'object' && aObjects) {
-            var dom = this.getDom();
-            if(aObjects.length > 0) {
-                Josie.utils.each(aObjects, function(oObject) {
-                    dom.append(oObject.getDom());
-                    oObject._renderControl();
-                });
-            } else {
-                dom.append(aObjects.getDom());
-                aObjects._renderControl();
-            }
-        }
     }
 
 });

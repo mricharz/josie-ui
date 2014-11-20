@@ -34,7 +34,9 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Link', {
             }
 
             sContent += '>';
-            sContent += sText;
+            if(sText) {
+                sContent += sText;
+            }
             sContent += '</a>';
 
             this.replaceDom(sContent);

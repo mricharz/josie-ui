@@ -7,34 +7,14 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Container', {
     },
 
     _renderControl: function() {
-        this._super('_renderControl', arguments);
-    },
-
-    setFluid: function(bFluid) {
-        if(typeof bFluid == 'boolean') {
-            this.setProperty('fluid', bFluid);
-            this.getDom().removeClass('container-fluid');
-            this.getDom().removeClass('container');
-            if(bFluid) {
+        if(this.getDom()) {
+            if(this.getFluid()) {
                 this.getDom().addClass('container-fluid');
             } else {
                 this.getDom().addClass('container');
             }
         }
-    },
-
-    setContent: function(aObjects) {
-        if(typeof aObjects == 'object' && aObjects) {
-            var dom = this.getDom();
-            if(aObjects.length > 0) {
-                Josie.utils.each(aObjects, function(oObject) {
-                    dom.append(oObject.getDom());
-                    oObject.invalidate();
-                });
-            } else {
-                dom.append(aObjects.getDom());
-                aObjects.invalidate();
-            }
-        }
+        this._super('_renderControl', arguments);
     }
+
 });

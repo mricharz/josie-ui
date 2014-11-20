@@ -31,26 +31,11 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Navigation', {
             sContent += '></ul>';
 
             this.replaceDom(sContent);
-            this._renderContent();
         }
         this._super('_renderControl', arguments);
     },
 
-    _renderContent: function() {
-        var aObjects = this.getContent();
-        if(typeof aObjects == 'object' && aObjects) {
-            if(aObjects.length > 0) {
-                var t = this;
-                Josie.utils.each(aObjects, function(oObject) {
-                    t._renderItem(oObject);
-                });
-            } else {
-                this._renderItem(aObjects);
-            }
-        }
-    },
-
-    _renderItem: function(oItem) {
+    _renderContentItem: function(oItem) {
         var sContent = '<li';
         if(oItem.getDisabled && oItem.getDisabled()) {
             sContent += ' class="disabled"';
