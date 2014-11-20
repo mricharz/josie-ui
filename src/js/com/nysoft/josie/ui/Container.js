@@ -24,7 +24,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Container', {
     },
 
     setContent: function(aObjects) {
-        if(typeof aObjects == 'object') {
+        if(typeof aObjects == 'object' && aObjects) {
             var dom = this.getDom();
             if(aObjects.length > 0) {
                 Josie.utils.each(aObjects, function(oObject) {

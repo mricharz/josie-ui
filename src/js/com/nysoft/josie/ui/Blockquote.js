@@ -16,7 +16,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Blockquote', {
 
     _renderContent: function() {
         var aObjects = this.getContent();
-        if(typeof aObjects == 'object') {
+        if(typeof aObjects == 'object' && aObjects) {
             var dom = this.getDom();
             if(aObjects.length > 0) {
                 Josie.utils.each(aObjects, function(oObject) {

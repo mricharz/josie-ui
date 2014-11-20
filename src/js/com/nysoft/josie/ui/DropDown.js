@@ -82,7 +82,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.DropDown', {
 
     _renderContent: function() {
         var aObjects = this.getContent();
-        if(typeof aObjects == 'object') {
+        if(typeof aObjects == 'object' && aObjects) {
             var dropDownList = this.getDom().children('ul');
             dropDownList.empty();
             if(aObjects.length > 0) {

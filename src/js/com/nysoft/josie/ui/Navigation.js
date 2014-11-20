@@ -51,8 +51,14 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Navigation', {
     },
 
     _renderItem: function(oItem) {
+        var sContent = '<li';
+        if(oItem.getDisabled && oItem.getDisabled()) {
+            sContent += ' class="disabled"';
+        }
+        sContent += '><li>';
         this.getDom().append(oItem.getDom());
         oItem._renderControl();
+        oItem.getDom().wrap(sContent);
     }
 
 });
