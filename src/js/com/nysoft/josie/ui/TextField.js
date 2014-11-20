@@ -7,8 +7,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.TextField', {
         label: 'string',
         placeholder: 'string',
         disabled: { type: 'boolean', defaultValue: false },
-        name: { type: 'string', defaultValue: '' },
-        click: 'function'
+        name: { type: 'string', defaultValue: '' }
     },
 
     _renderControl: function() {

@@ -5,8 +5,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Image', {
         type: { type: 'string', defaultValue: '' },
         responsive: { type: 'boolean', defaultValue: false },
         src: 'string',
-        title: 'string',
-        click: 'function'
+        title: 'string'
     },
 
     _renderControl: function() {

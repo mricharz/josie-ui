@@ -5,8 +5,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.DropDownItem', {
     meta: {
         text: 'string',
         type: { type: 'string', defaultValue: com.nysoft.josie.ui.DropDownItem.Type.Default },
-        disabled: { type: 'boolean', defaultValue: false },
-        click: 'function'
+        disabled: { type: 'boolean', defaultValue: false }
     },
 
     _renderControl: function() {

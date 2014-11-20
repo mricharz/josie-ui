@@ -9,8 +9,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Button', {
         block: { type: 'boolean', defaultValue: false },
         disabled: { type: 'boolean', defaultValue: false },
 		text: 'string',
-		icon: 'string',
-		click: 'function'
+		icon: 'string'
 	},
 	
 	_renderControl: function() {

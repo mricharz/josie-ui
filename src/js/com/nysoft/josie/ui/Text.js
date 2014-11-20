@@ -5,8 +5,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Text', {
         lead: { type: 'boolean', defaultValue: false },
         text: 'string',
         alignment: { type: 'string', defaultValue: '' },
-        transformation: { type: 'string', defaultValue: '' },
-        click: 'function'
+        transformation: { type: 'string', defaultValue: '' }
     },
 
     _renderControl: function() {
