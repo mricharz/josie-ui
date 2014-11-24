@@ -1,6 +1,6 @@
 Josie.declare('com.nysoft.josie.ui.TextField.Type');
 
-//Enum for Button-Type
+//Enum for TextField-Type
 com.nysoft.josie.ui.TextField.Type = {
     Text: 'text',
     Email: 'email',

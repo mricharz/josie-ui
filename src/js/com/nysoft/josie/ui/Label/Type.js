@@ -1,6 +1,6 @@
 Josie.declare('com.nysoft.josie.ui.Label.Type');
 
-//Enum for Button-Type
+//Enum for Label-Type
 com.nysoft.josie.ui.Label.Type = {
     Default: 'default',
     Primary: 'primary',

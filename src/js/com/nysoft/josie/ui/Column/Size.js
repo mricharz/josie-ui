@@ -1,6 +1,6 @@
 Josie.declare('com.nysoft.josie.ui.Column.Size');
 
-//Enum for Button-Size
+//Enum for Column-Size
 com.nysoft.josie.ui.Column.Size = {
     Large: {
         1: 'lg-1',

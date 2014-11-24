@@ -1,6 +1,6 @@
 Josie.declare('com.nysoft.josie.ui.Column.Offset');
 
-//Enum for Button-Size
+//Enum for Column-Offset
 com.nysoft.josie.ui.Column.Offset = {
     Large: {
         1: 'lg-offset-1',
