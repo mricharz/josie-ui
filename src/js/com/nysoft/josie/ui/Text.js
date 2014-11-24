@@ -1,4 +1,6 @@
 Josie.require('com.nysoft.josie.core.Control');
+Josie.require('com.nysoft.josie.ui.Text.Alignment');
+Josie.require('com.nysoft.josie.ui.Text.Transformation');
 
 com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Text', {
     meta: {
@@ -20,10 +22,10 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Text', {
                 this.addCssClass('lead');
             }
             if(sAlignment) {
-                this.addCssClass('text-'+sAlignment);
+                this.addCssClass(sAlignment);
             }
             if(sTransformation) {
-                this.addCssClass('text-'+sTransformation);
+                this.addCssClass(sTransformation);
             }
             sContent += this.writeCssClasses();
 

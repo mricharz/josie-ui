@@ -5,8 +5,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Navigation', {
     meta: {
         type: { type: 'string', defaultValue: com.nysoft.josie.ui.Navigation.Type.Tabs },
         stacked: { type: 'boolean', defaultValue: false },
-        justified: { type: 'boolean', defaultValue: false },
-        content: 'object'
+        justified: { type: 'boolean', defaultValue: false }
     },
 
     _renderControl: function() {

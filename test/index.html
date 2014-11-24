@@ -12,7 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script>
         //set debug logging
-        Josie.log.setLevel(Josie.log.level.Debug);
+        Josie.log.setLevel(Josie.log.level.Warning);
         //set location to ui-lib to right path (other than core-lib)
         Josie.namespace('com.nysoft.josie.ui', '../src/js/com/nysoft/josie/ui');
 
@@ -278,17 +278,17 @@
 
     <div data-class="ui.Heading" data-text="Alignments" data-size="3"></div>
 
-    <div data-class="ui.Text" data-alignment="left" data-text="Left alignment"></div>
-    <div data-class="ui.Text" data-alignment="center" data-text="Center alignment"></div>
-    <div data-class="ui.Text" data-alignment="right" data-text="Right alignment"></div>
-    <div data-class="ui.Text" data-alignment="justify" data-text="Justified text"></div>
-    <div data-class="ui.Text" data-alignment="nowrap" data-text="No wrap text"></div>
+    <div data-class="ui.Text" data-alignment="ui.Text.Alignment.Left" data-text="Left alignment"></div>
+    <div data-class="ui.Text" data-alignment="ui.Text.Alignment.Center" data-text="Center alignment"></div>
+    <div data-class="ui.Text" data-alignment="ui.Text.Alignment.Right" data-text="Right alignment"></div>
+    <div data-class="ui.Text" data-alignment="ui.Text.Alignment.Justify" data-text="Justified text"></div>
+    <div data-class="ui.Text" data-alignment="ui.Text.Alignment.Nowrap" data-text="No wrap text"></div>
 
     <div data-class="ui.Heading" data-text="Transformations" data-size="3"></div>
 
-    <div data-class="ui.Text" data-transformation="lowercase" data-text="Lowercase transformation"></div>
-    <div data-class="ui.Text" data-transformation="uppercase" data-text="Uppercase transformation"></div>
-    <div data-class="ui.Text" data-transformation="capitalize" data-text="capitalize transformation"></div>
+    <div data-class="ui.Text" data-transformation="ui.Text.Transformation.Lowercase" data-text="Lowercase transformation"></div>
+    <div data-class="ui.Text" data-transformation="ui.Text.Transformation.Uppercase" data-text="Uppercase transformation"></div>
+    <div data-class="ui.Text" data-transformation="ui.Text.Transformation.Capitalize" data-text="capitalize transformation"></div>
 
     <div data-class="ui.Heading" data-text="Labels" data-size="2"></div>
 
