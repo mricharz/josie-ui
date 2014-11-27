@@ -26,6 +26,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Navigation', {
                 this.addCssClass('nav-justified');
             }
             sContent += this.writeCssClasses();
+            sContent += this.writeCssStyles();
 
             sContent += '></ul>';
 

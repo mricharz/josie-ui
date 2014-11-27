@@ -18,6 +18,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Label', {
                 this.addCssClass('label-'+sType);
             }
             sContent += this.writeCssClasses();
+            sContent += this.writeCssStyles();
 
             sContent += '>';
             if(sText) {

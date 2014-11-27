@@ -33,6 +33,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Button', {
                 this.addCssClass('btn-block');
             }
             sContent += this.writeCssClasses();
+            sContent += this.writeCssStyles();
 
             if(bDisabled) {
                 sContent += 'disabled="disabled"';

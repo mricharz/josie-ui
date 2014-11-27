@@ -12,6 +12,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Badge', {
 
             this.addCssClass('badge');
             sContent += this.writeCssClasses();
+            sContent += this.writeCssStyles();
 
             sContent += '>';
             if(sText) {

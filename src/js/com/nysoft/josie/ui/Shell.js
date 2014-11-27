@@ -1,17 +1,12 @@
-jQuery.require('com.nysoft.josie.ui.Container');
-jQuery.require('com.nysoft.josie.networking.VirtualProtocolSocket');
-jQuery.require('com.nysoft.josie.ui.Button');
-jQuery.require('com.nysoft.josie.user.User');
-jQuery.require('css/com/nysoft/josie/ui.css', {dataType: 'stylesheet'});
+Josie.require('com.nysoft.josie.ui.Container');
+Josie.require('com.nysoft.josie.ui.Button');
 
 com.nysoft.josie.ui.Container.extend('com.nysoft.josie.ui.Shell', {
 	meta: {
-		user: 'object',
-		socketConnection: 'object',
 		content: 'string',
 		leftContent: 'string',
 		rightContent: 'string',
-		menubarHeight: 'number',
+		menubarHeight: 'number'
 	},
 	
 	init: function() {
@@ -19,26 +14,20 @@ com.nysoft.josie.ui.Container.extend('com.nysoft.josie.ui.Shell', {
 		this.bindEvent('onAfterRenderer', function() {
 			this._updateSize();
 			//this._updateSize(); //TODO: Call it twice to get the right size! Don't know yet why!!! Not time to analyse this shit!
-			window.addEventListener("orientationchange", jQuery.proxy(this._updateSize, this));
+			window.addEventListener("orientatiolayouting with nchange", jQuery.proxy(this._updateSize, this));
 			window.addEventListener("resize", jQuery.proxy(this._updateSize, this));
 		});
 		
-		this.setUser(new com.nysoft.josie.user.User({
-			name: jQuery.utils.getParameter('name') || 'unnamed user'
-		}));
-		
 		this.sidebarWidth = 300;
-		if(jQuery.device.mobile) {
+		if(Josie.device.mobile) {
 			this.sidebarWidth = 150;
 		}
-		
-		this.openSocket();
 		
 		(!this.getMenubarHeight()) && this.setMenubarHeight(42);
 	},
 	
 	_renderControl: function() {
-		jQuery.log.trace('Shell::renderControl');
+        Josie.log.trace('Shell::renderControl');
 		if(this.getDom()) {
 			this.getDom().addClass('shell');
 			this.mainbar = jQuery(
@@ -158,7 +147,7 @@ com.nysoft.josie.ui.Container.extend('com.nysoft.josie.ui.Shell', {
 	},
 	
 	_updateSize: function() {
-		jQuery.log.trace('Shell::updateSize');
+        Josie.log.trace('Shell::updateSize');
 		var parent = this.getDom().parent();
 		if(parent && parent.get(0) && parent.get(0).nodeName.toLowerCase() == 'body') {
 			parent = jQuery(window);
@@ -171,38 +160,6 @@ com.nysoft.josie.ui.Container.extend('com.nysoft.josie.ui.Shell', {
 		this.contentContainer.css('height', sidebarHeight);
 		this.leftSidebar.css('height', sidebarHeight);
 		this.rightSidebar.css('height', sidebarHeight);
-	},
-
-	isSocketReady: function() {
-		if(this.getSocketConnection().getStatus() != com.nysoft.josie.core.Socket.Status.Opened) {
-			this.openSocket();
-		}
-		if(this.getSocketConnection().getStatus() == com.nysoft.josie.core.Socket.Status.Opened) {
-			return true;
-		}
-		return false;
-	},
-	
-	openSocket: function() {
-		if(!this.getSocketConnection()) {
-			this.setSocketConnection(new com.nysoft.josie.networking.VirtualProtocolSocket({
-				url: 'ws://dev.nysoft.de:88',
-				onOpen: jQuery.proxy(this.onSocketOpen, this),
-				onError: jQuery.proxy(this.onSocketError, this)
-			}));
-		}
-		if(this.getSocketConnection().getStatus() != com.nysoft.josie.core.Socket.Status.Connecting && 
-			this.getSocketConnection().getStatus() != com.nysoft.josie.core.Socket.Status.Opened &&
-			this.getSocketConnection().getStatus() != com.nysoft.josie.core.Socket.Status.Disconnecting) {
-			this.getSocketConnection().open();
-		}
-	},
-	
-	onSocketOpen: function(e) {
-		
-	},
-	
-	onSocketError: function(e) {
-		alert(JSON.stringify(e));
 	}
+
 });

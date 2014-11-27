@@ -11,7 +11,12 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Heading', {
         if(this.getDom()) {
             var iSize = this.getSize(),
                 sSecondaryText = this.getSecondaryText(),
-                sContent = '<h'+iSize+'>';
+                sContent = '<h'+iSize;
+
+            sContent += this.writeCssClasses();
+            sContent += this.writeCssStyles();
+
+            sContent += '>';
             sContent += this.getText();
             if(sSecondaryText) {
                 sContent += ' <small>'+sSecondaryText+'</small>';

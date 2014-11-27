@@ -19,6 +19,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Link', {
                 sContent = '<a';
 
             sContent += this.writeCssClasses();
+            sContent += this.writeCssStyles();
 
             if(sHref) {
                 sContent += 'href="'+sHref+'" ';

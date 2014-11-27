@@ -22,6 +22,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Alert', {
                 this.addCssClass('alert-'+sType);
             }
             sContent += this.writeCssClasses();
+            sContent += this.writeCssStyles();
 
             sContent += '>';
             if(bDismissible) {

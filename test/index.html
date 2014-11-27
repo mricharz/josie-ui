@@ -12,7 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script>
         //set debug logging
-        Josie.log.setLevel(Josie.log.level.Warning);
+        Josie.log.setLevel(Josie.log.level.Info);
         //set location to ui-lib to right path (other than core-lib)
         Josie.namespace('com.nysoft.josie.ui', '../src/js/com/nysoft/josie/ui');
 
@@ -20,9 +20,9 @@
         Josie.alias('ui', 'com.nysoft.josie.ui');
     </script>
 </head>
-<body>
+<body style="background: url(http://awesomewallpaper.files.wordpress.com/2011/07/wallpaper-90064.jpg); background-size: 100%; background-attachment: fixed;">
 
-<div data-class="ui.Container">
+<div data-class="ui.Container" data-css-styles='{"background":"rgba(255,255,255,0.85)", "box-shadow": "0 0 14px rgba(0,0,0,0.6)"}'>
 
     <div data-class="ui.Heading" data-text="Josie-UI Package"></div>
 

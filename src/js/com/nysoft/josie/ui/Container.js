@@ -9,10 +9,13 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Container', {
     _renderControl: function() {
         if(this.getDom()) {
             if(this.getFluid()) {
-                this.getDom().addClass('container-fluid');
+                this.addCssClass('container-fluid');
             } else {
-                this.getDom().addClass('container');
+                this.addCssClass('container');
             }
+            this.getDom().addClass(this.getCssClasses().join(' '));
+
+            this.getDom().css(this.getCssStyles());
         }
         this._super('_renderControl', arguments);
     }

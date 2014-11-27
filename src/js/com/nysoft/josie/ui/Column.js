@@ -15,11 +15,17 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Column', {
                 sOffset = this.getOffset();
 
             if(sSize) {
-                this.getDom().addClass('col-' + sSize);
+                this.addCssClass('col-' + sSize);
             }
             if(sOffset) {
-                this.getDom().addClass('col-' + sOffset);
+                this.addCssClass('col-' + sOffset);
             }
+
+            this.getDom().addClass(this.getCssClasses().join(' '));
+            this.setCssClasses([]);
+
+            this.getDom().css(this.getCssStyles());
+            this.setCssStyles({});
         }
         this._super('_renderControl', arguments);
     }

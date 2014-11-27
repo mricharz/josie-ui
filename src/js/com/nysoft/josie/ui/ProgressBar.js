@@ -44,6 +44,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.ProgressBar', {
                 this.addCssClass('active');
             }
             sContent += this.writeCssClasses();
+            sContent += this.writeCssStyles();
             sContent += 'aria-valuenow="'+iValue+'" ';
             sContent += 'aria-valuemin="'+iMin+'" ';
             sContent += 'aria-valuemax="'+iMax+'" ';

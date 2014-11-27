@@ -28,6 +28,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.ButtonGroup', {
                 this.addCssClass('btn-group-justified');
             }
             sContent += this.writeCssClasses();
+            sContent += this.writeCssStyles();
 
             sContent += 'role="group"';
             sContent += '></div>';

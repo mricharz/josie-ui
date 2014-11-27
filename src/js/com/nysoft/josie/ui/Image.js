@@ -22,6 +22,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Image', {
                 this.addCssClass('img-responsive');
             }
             sContent += this.writeCssClasses();
+            sContent += this.writeCssStyles();
 
             sContent += ' alt="'+sTitle+'" title="'+sTitle+'"';
             sContent += ' src="'+sSrc+'"';

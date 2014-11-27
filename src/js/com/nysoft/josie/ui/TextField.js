@@ -36,6 +36,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.TextField', {
                 this.addCssClass('form-control');
             }
             sContent += this.writeCssClasses();
+            sContent += this.writeCssStyles();
 
             sContent += 'type="'+sType+'" ';
             if(sName) {

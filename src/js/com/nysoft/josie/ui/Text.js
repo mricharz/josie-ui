@@ -28,6 +28,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Text', {
                 this.addCssClass(sTransformation);
             }
             sContent += this.writeCssClasses();
+            sContent += this.writeCssStyles();
 
             sContent += '>';
             if(sText) {

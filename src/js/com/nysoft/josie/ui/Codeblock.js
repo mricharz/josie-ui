@@ -8,7 +8,12 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Codeblock', {
 
     _renderControl: function() {
         if(this.getDom()) {
-            this.replaceDom('<pre></pre>');
+            var sContent = '<pre';
+            sContent += this.writeCssClasses();
+            sContent += this.writeCssStyles();
+            sContent += '></pre>';
+
+            this.replaceDom(sContent);
         }
         this._super('_renderControl', arguments);
     }

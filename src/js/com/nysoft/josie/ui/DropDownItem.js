@@ -22,6 +22,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.DropDownItem', {
                 this.addCssClass(sType);
             }
             sContent += this.writeCssClasses();
+            sContent += this.writeCssStyles();
 
             sContent += '>';
             sContent += sText;
