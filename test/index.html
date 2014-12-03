@@ -457,9 +457,61 @@
     <div data-class="ui.TextField" data-label="Normal" data-placeholder="Normal TextField" data-disabled="true"></div>
     <div data-class="ui.TextField" data-label="File" data-type="ui.TextField.Type.File" data-disabled="true"></div>
 
-</div>
+    <div data-class="ui.Heading" data-text="Modals" data-size="2"></div>
 
-<br />
+    <div data-class="ui.Codeblock">
+        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Modal&amp;quot;&amp;gt;Your content in here&amp;lt;/div&amp;gt;"></div>
+    </div>
+
+    <div data-id="simple-modal" data-class="ui.Modal">
+        <div data-class="ui.Text" data-text="Simple Modal"></div>
+    </div>
+
+    <div data-class="ui.Button" data-text="Toggle Simple Modal" data-on-click="Josie.byId('simple-modal').toggle();"></div>
+
+    <div data-id="full-modal" data-class="ui.Modal">
+        <div data-property="header">
+            <div data-class="ui.Heading" data-size="4" data-text="Full Modal"></div>
+        </div>
+        <div data-property="content">
+            <div data-class="ui.Text" data-text="I am a Modal with header and footer"></div>
+        </div>
+        <div data-property="footer">
+            <div data-class="ui.Button" data-text="Ok" data-type="ui.Button.Type.Primary" data-on-click="Josie.byId('full-modal').close();"></div>
+            <div data-class="ui.Button" data-text="Close" data-on-click="Josie.byId('full-modal').close();"></div>
+        </div>
+    </div>
+
+    <div data-class="ui.Button" data-text="Toggle Full Modal" data-on-click="Josie.byId('full-modal').toggle();"></div>
+
+    <div data-id="small-modal" data-class="ui.Modal" data-size="ui.Modal.Size.Small">
+        <div data-property="header">
+            <div data-class="ui.Heading" data-size="4" data-text="Small Modal"></div>
+        </div>
+        <div data-property="content">
+            <div data-class="ui.Text" data-text="I am a Modal with header and footer"></div>
+        </div>
+        <div data-property="footer">
+            <div data-class="ui.Button" data-text="Close" data-type="ui.Button.Type.Primary" data-on-click="Josie.byId('small-modal').close();"></div>
+        </div>
+    </div>
+
+    <div data-class="ui.Button" data-text="Toggle Small Modal" data-on-click="Josie.byId('small-modal').toggle();"></div>
+
+    <div data-id="large-modal" data-class="ui.Modal" data-size="ui.Modal.Size.Large">
+        <div data-property="header">
+            <div data-class="ui.Heading" data-size="4" data-text="Large Modal"></div>
+        </div>
+        <div data-property="content">
+            <div data-class="ui.Text" data-text="I am a Modal with header and footer"></div>
+        </div>
+        <div data-property="footer">
+            <div data-class="ui.Button" data-text="Close" data-type="ui.Button.Type.Primary" data-on-click="Josie.byId('large-modal').close();"></div>
+        </div>
+    </div>
+
+    <div data-class="ui.Button" data-text="Toggle Large Modal" data-on-click="Josie.byId('large-modal').toggle();"></div>
+</div>
 
 </body>
 </html>

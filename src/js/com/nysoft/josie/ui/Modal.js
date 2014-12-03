@@ -140,6 +140,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Modal', {
         }
     },
 
+    //overwrites core.Control::_renderContent
     _renderContent: function() {
         var aObjects = this.getContent();
         if(typeof aObjects == 'object' && aObjects) {
