@@ -6,6 +6,8 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Modal', {
         header: { type: 'object[]', defaultValue: [] },
         footer: { type: 'object[]', defaultValue: [] },
         fade: { type: 'boolean', defaultValue: true },
+        keyboard: { type: 'boolean', defaultValue: true },
+        show: { type: 'boolean', defaultValue: true },
         size: { type: 'string', defaultValue: com.nysoft.josie.ui.Modal.Size.Default }
     },
 
@@ -57,6 +59,8 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Modal', {
             aHeader = this.getHeader(),
             aFooter = this.getFooter(),
             bFade = this.getFade(),
+            bKeyboard = this.getKeyboard(),
+            bShow = this.getShow(),
             sSize = this.getSize(),
             sId = this.getId(),
             sContent = '<div';
@@ -70,6 +74,12 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Modal', {
         sContent += this.writeCssStyles();
         sContent += 'role="dialog" ';
         sContent += 'aria-hidden="true" ';
+        if(!bKeyboard) {
+            sContent += 'data-keyboard="false" ';
+        }
+        if(bShow) {
+            sContent += 'data-show="true" ';
+        }
         sContent += 'id="'+sId+'"';
         sContent += '>';
 
