@@ -8,6 +8,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Modal', {
         fade: { type: 'boolean', defaultValue: true },
         keyboard: { type: 'boolean', defaultValue: true },
         show: { type: 'boolean', defaultValue: true },
+        backdrop: { type: 'string', defaultValue: "true" },
         size: { type: 'string', defaultValue: com.nysoft.josie.ui.Modal.Size.Default }
     },
 
@@ -61,6 +62,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Modal', {
             bFade = this.getFade(),
             bKeyboard = this.getKeyboard(),
             bShow = this.getShow(),
+            sBackdrop = this.getBackdrop();
             sSize = this.getSize(),
             sId = this.getId(),
             sContent = '<div';
@@ -79,6 +81,9 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Modal', {
         }
         if(bShow) {
             sContent += 'data-show="true" ';
+        }
+        if(sBackdrop !== "true") {
+            sContent += 'data-backdrop="'+sBackdrop+'" ';
         }
         sContent += 'id="'+sId+'"';
         sContent += '>';

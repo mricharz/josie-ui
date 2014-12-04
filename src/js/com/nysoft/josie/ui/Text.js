@@ -6,6 +6,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Text', {
     meta: {
         lead: { type: 'boolean', defaultValue: false },
         text: 'string',
+        htmlEncode: { type: 'boolean', defaultValue: false },
         alignment: { type: 'string', defaultValue: '' },
         transformation: { type: 'string', defaultValue: '' }
     },
@@ -13,6 +14,7 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Text', {
     _renderControl: function() {
         if(this.getDom()) {
             var bLead = this.getLead(),
+                bHtmlEncode = this.getHtmlEncode(),
                 sText = this.getText(),
                 sAlignment =  this.getAlignment(),
                 sTransformation = this.getTransformation(),
@@ -31,12 +33,15 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Text', {
             sContent += this.writeCssStyles();
 
             sContent += '>';
-            if(sText) {
+            if(sText && !bHtmlEncode) {
                 sContent += sText;
             }
             sContent += '</p>';
 
             this.replaceDom(sContent);
+            if(sText && bHtmlEncode) {
+                this.getDom().text(sText);
+            }
         }
         this._super('_renderControl', arguments);
     }

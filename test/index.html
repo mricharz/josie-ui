@@ -28,12 +28,13 @@
 
     <div data-class="ui.Text" data-text="Using bootstrap 3.3.1"></div>
 
-    <div data-class="ui.Heading" data-text="Container, Rows &amp; Column" data-size="2"></div>
+    <!--
+        Container
+    -->
+    <div data-class="ui.Heading" data-text="Container" data-size="2"></div>
 
     <div data-class="ui.Codeblock">
-        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Container&amp;quot;&amp;gt;Your container-content in here&amp;lt;/div&amp;gt;"></div>
-        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Row&amp;quot;&amp;gt;Your row-content in here&amp;lt;/div&amp;gt;"></div>
-        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Column&amp;quot;&amp;gt;Your column-content in here&amp;lt;/div&amp;gt;"></div>
+        <div data-class="ui.Text" data-html-encode="true" data-text='<div data-class="com.nysoft.josie.ui.Container">Your container-content in here</div>'></div>
     </div>
 
     <div data-class="ui.Heading" data-text="Simple Container" data-secondary-text="automatically full-width" data-size="2"></div>
@@ -48,7 +49,15 @@
         </div>
     </div>
 
+    <!--
+        Rows & Columns
+    -->
     <div data-class="ui.Heading" data-text="Rows &amp; Columns" data-size="2"></div>
+
+    <div data-class="ui.Codeblock">
+        <div data-class="ui.Text" data-html-encode="true" data-text='<div data-class="com.nysoft.josie.ui.Row">Your row-content in here</div>'></div>
+        <div data-class="ui.Text" data-html-encode="true" data-text='<div data-class="com.nysoft.josie.ui.Column">Your column-content in here</div>'></div>
+    </div>
 
     <div data-class="ui.Container">
         <div data-class="ui.Row">
@@ -86,7 +95,9 @@
         </div>
     </div>
 
-
+    <!--
+        Navigations
+    -->
     <div data-class="ui.Heading" data-text="Navigations" data-size="2"></div>
 
     <div data-class="ui.Navigation">
@@ -128,14 +139,16 @@
         <div data-class="ui.Link" data-text="Default NavigationLink with href, target and title" data-href="http://google.de" data-title="Go to google.de" data-target="_blank"></div>
     </div>
 
-
+    <!--
+        Headings
+    -->
     <div data-class="ui.Heading" data-text="Headings" data-size="2"></div>
 
     <div data-class="ui.Codeblock">
-        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Heading&amp;quot; data-text=&amp;quot;Heading&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;"></div>
+        <div data-class="ui.Text" data-html-encode="true" data-text='<div data-class="com.nysoft.josie.ui.Heading" data-text="Heading"></div>'></div>
     </div>
 
-    <div data-class="ui.Text" data-text="All HTML headings, <code>&amp;lt;h1&amp;gt;</code> through <code>&amp;lt;h6&amp;gt;</code>, are available. .h1 through .h6 classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline."></div>
+    <div data-class="ui.Text" data-text="All HTML headings, <code><h1></code> through <code><h6></code>, are available. .h1 through .h6 classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline."></div>
 
     <div data-class="ui.Heading" data-text="h1 Heading" data-size="1"></div>
     <div data-class="ui.Heading" data-text="h2 Heading" data-size="2"></div>
@@ -145,7 +158,7 @@
     <div data-class="ui.Heading" data-text="h6 Heading" data-size="6"></div>
 
     <div data-class="ui.Codeblock">
-        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Heading&amp;quot; data-text=&amp;quot;Heading&amp;quot; data-secondary-text=&amp;quot;Secondary text&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;"></div>
+        <div data-class="ui.Text" data-html-encode="true" data-text='<div data-class="com.nysoft.josie.ui.Heading" data-text="Heading" data-secondary-text="Secondary text"></div>'></div>
     </div>
 
     <div data-class="ui.Heading" data-text="h1 Heading" data-size="1" data-secondary-text="Secondary text"></div>
@@ -161,10 +174,13 @@
     <div data-class="ui.Link" data-text="Some Link to click with target" data-href="http://google.de" data-target="_blank"></div>
     <div data-class="ui.Link" data-text="Some Link to click with target and title" data-href="http://google.de" data-target="_blank" data-title="Go to google.de"></div>
 
+    <!--
+        Buttons
+    -->
     <div data-class="ui.Heading" data-text="Buttons" data-size="2"></div>
 
     <div data-class="ui.Codeblock">
-        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Button&amp;quot; data-text=&amp;quot;Buttontext&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;"></div>
+        <div data-class="ui.Text" data-html-encode="true" data-text='<div data-class="com.nysoft.josie.ui.Button" data-text="Buttontext"></div>'></div>
     </div>
 
     <div data-class="ui.Button" data-text="Default Button"></div>
@@ -208,6 +224,9 @@
     <div data-class="ui.Button" data-text="Primary Button" data-block="true" data-type="ui.Button.Type.Primary"></div>
     <div data-class="ui.Button" data-text="Success Button" data-block="true" data-type="ui.Button.Type.Success"></div>
 
+    <!--
+        Dropdown Buttons
+    -->
     <div data-class="ui.Heading" data-text="DropDown Buttons" data-size="2"></div>
 
     <div data-class="ui.DropDown" data-text="DropDown">
@@ -216,10 +235,13 @@
         <div data-class="ui.DropDownItem" data-text="Thrid Item"></div>
     </div>
 
+    <!--
+        ButtonGroup
+    -->
     <div data-class="ui.Heading" data-text="ButtonGroup" data-size="2"></div>
 
     <div data-class="ui.Codeblock">
-        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.ButtonGroup&amp;quot;&amp;gt;Your buttons in here&amp;lt;/div&amp;gt;"></div>
+        <div data-class="ui.Text" data-html-encode="true" data-text='<div data-class="com.nysoft.josie.ui.ButtonGroup">Your buttons in here</div>'></div>
     </div>
 
     <div data-class="ui.ButtonGroup">
@@ -264,10 +286,13 @@
         <div data-class="ui.Button" data-text="5"></div>
     </div>
 
+    <!--
+        Texts
+    -->
     <div data-class="ui.Heading" data-text="Texts" data-size="2"></div>
 
     <div data-class="ui.Codeblock">
-        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Text&amp;quot; data-text=&amp;quot;Your text&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;"></div>
+        <div data-class="ui.Text" data-html-encode="true" data-text='<div data-class="com.nysoft.josie.ui.Text" data-text="Your text"></div>'></div>
     </div>
 
     <div data-class="ui.Text" data-text="Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus."></div>
@@ -290,10 +315,13 @@
     <div data-class="ui.Text" data-transformation="ui.Text.Transformation.Uppercase" data-text="Uppercase transformation"></div>
     <div data-class="ui.Text" data-transformation="ui.Text.Transformation.Capitalize" data-text="capitalize transformation"></div>
 
+    <!--
+        Labels
+    -->
     <div data-class="ui.Heading" data-text="Labels" data-size="2"></div>
 
     <div data-class="ui.Codeblock">
-        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Label&amp;quot; data-text=&amp;quot;Labeltext&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;"></div>
+        <div data-class="ui.Text" data-html-encode="true" data-text='<div data-class="com.nysoft.josie.ui.Label" data-text="Labeltext"></div>'></div>
     </div>
 
     <div data-class="ui.Label" data-text="Default" data-type="ui.Label.Type.Default"></div>
@@ -332,10 +360,13 @@
         <div data-class="ui.Label" data-text="WOW" data-type="ui.Label.Type.Warning"></div>
     </div>
 
+    <!--
+        Badges
+    -->
     <div data-class="ui.Heading" data-text="Badges" data-size="2"></div>
 
     <div data-class="ui.Codeblock">
-        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Badge&amp;quot; data-text=&amp;quot;42&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;"></div>
+        <div data-class="ui.Text" data-html-encode="true" data-text='<div data-class="com.nysoft.josie.ui.Badge" data-text="42"></div>'></div>
     </div>
 
     <div data-class="ui.Button" data-text="Example" data-type="ui.Button.Type.Default">
@@ -351,10 +382,13 @@
         <div data-class="ui.Badge" data-text="42"></div>
     </div>
 
+    <!--
+        Alerts
+    -->
     <div data-class="ui.Heading" data-text="Alerts" data-size="2"></div>
 
     <div data-class="ui.Codeblock">
-        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Alert&amp;quot;&amp;gt;Your content-elements&amp;lt;/div&amp;gt;"></div>
+        <div data-class="ui.Text" data-html-encode="true" data-text='<div data-class="com.nysoft.josie.ui.Alert">Your content-elements</div>'></div>
     </div>
 
     <div data-class="ui.Alert" data-type="ui.Alert.Type.Success">
@@ -379,6 +413,9 @@
         <div data-class="ui.Text" data-text="&lt;strong&gt;Heads up!&lt;/strong&gt; This alert needs your attention, but it's not super important."></div>
     </div>
 
+    <!--
+        Progress Bars
+    -->
     <div data-class="ui.Heading" data-text="Progress Bars" data-size="2"></div>
 
     <div data-class="ui.ProgressBar" data-value="25"></div>
@@ -405,23 +442,29 @@
     <div data-class="ui.ProgressBar" data-value="30" data-striped="true"></div>
     <div data-class="ui.ProgressBar" data-value="30" data-striped="true" data-animate="true"></div>
 
+    <!--
+        Blockquotes & Codeblocks
+    -->
     <div data-class="ui.Heading" data-text="Blockquotes & Codeblocks" data-size="2"></div>
 
     <div data-class="ui.Text" data-text="You can also create Blockquotes and Codeblocks"></div>
 
     <div data-class="ui.Codeblock">
-        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Codeblock&amp;quot;&amp;gt;Your code as content in here&amp;lt;/div&amp;gt;"></div>
-        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Blockquote&amp;quot;&amp;gt;Your blockquote as content in here&amp;lt;/div&amp;gt;"></div>
+        <div data-class="ui.Text" data-html-encode="true" data-text='<div data-class="com.nysoft.josie.ui.Codeblock">Your code as content in here</div>'></div>
+        <div data-class="ui.Text" data-html-encode="true" data-text='<div data-class="com.nysoft.josie.ui.Blockquote">Your blockquote as content in here</div>'></div>
     </div>
 
     <div data-class="ui.Blockquote">
         <div data-class="ui.Text" data-text="Example Blockquote"></div>
     </div>
 
+    <!--
+        Images
+    -->
     <div data-class="ui.Heading" data-text="Images" data-size="2"></div>
 
     <div data-class="ui.Codeblock">
-        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Image&amp;quot; data-src=&amp;quot;http://dummyimage.com/150x150/999/fff&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;"></div>
+        <div data-class="ui.Text" data-html-encode="true" data-text='<div data-class="com.nysoft.josie.ui.Image" data-src="http://dummyimage.com/150x150/999/fff"></div>'></div>
     </div>
 
     <div data-class="ui.Image" data-src="http://dummyimage.com/150x150/999/ffffff&text=Default+Image"></div>
@@ -430,10 +473,13 @@
     <div data-class="ui.Image" data-type="circle" data-src="http://dummyimage.com/150x150/999/ffffff&text=Circle+Image"></div>
     <div data-class="ui.Image" data-type="thumbnail" data-src="http://dummyimage.com/150x150/999/ffffff&text=Thumbnail+Image"></div>
 
+    <!--
+        Forms
+    -->
     <div data-class="ui.Heading" data-text="Forms" data-size="2"></div>
 
     <div data-class="ui.Codeblock">
-        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.TextField&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;"></div>
+        <div data-class="ui.Text" data-html-encode="true" data-text='<div data-class="com.nysoft.josie.ui.TextField"></div>'></div>
     </div>
 
     <div data-class="ui.TextField" data-label="Normal" data-placeholder="Normal TextField"></div>
@@ -457,10 +503,13 @@
     <div data-class="ui.TextField" data-label="Normal" data-placeholder="Normal TextField" data-disabled="true"></div>
     <div data-class="ui.TextField" data-label="File" data-type="ui.TextField.Type.File" data-disabled="true"></div>
 
+    <!--
+        Modal
+    -->
     <div data-class="ui.Heading" data-text="Modals" data-size="2"></div>
 
     <div data-class="ui.Codeblock">
-        <div data-class="ui.Text" data-text="&amp;lt;div data-class=&amp;quot;com.nysoft.josie.ui.Modal&amp;quot;&amp;gt;Your content in here&amp;lt;/div&amp;gt;"></div>
+        <div data-class="ui.Text" data-html-encode="true" data-text='<div data-class="com.nysoft.josie.ui.Modal">Your content in here</div>'></div>
     </div>
 
     <div data-id="simple-modal" data-class="ui.Modal">
@@ -469,7 +518,7 @@
 
     <div data-class="ui.Button" data-text="Toggle Simple Modal" data-on-click="Josie.byId('simple-modal').toggle();"></div>
 
-    <div data-id="full-modal" data-class="ui.Modal">
+    <div data-id="full-modal" data-class="ui.Modal" data-fade="false">
         <div data-property="header">
             <div data-class="ui.Heading" data-size="4" data-text="Full Modal"></div>
         </div>
@@ -482,9 +531,9 @@
         </div>
     </div>
 
-    <div data-class="ui.Button" data-text="Toggle Full Modal" data-on-click="Josie.byId('full-modal').toggle();"></div>
+    <div data-class="ui.Button" data-text="Toggle Full Modal without animation" data-on-click="Josie.byId('full-modal').toggle();"></div>
 
-    <div data-id="small-modal" data-class="ui.Modal" data-size="ui.Modal.Size.Small">
+    <div data-id="small-modal" data-class="ui.Modal" data-size="ui.Modal.Size.Small" data-backdrop="false">
         <div data-property="header">
             <div data-class="ui.Heading" data-size="4" data-text="Small Modal"></div>
         </div>
@@ -496,9 +545,9 @@
         </div>
     </div>
 
-    <div data-class="ui.Button" data-text="Toggle Small Modal" data-on-click="Josie.byId('small-modal').toggle();"></div>
+    <div data-class="ui.Button" data-text="Toggle Small Modal without backdrop" data-on-click="Josie.byId('small-modal').toggle();"></div>
 
-    <div data-id="large-modal" data-class="ui.Modal" data-size="ui.Modal.Size.Large">
+    <div data-id="large-modal" data-class="ui.Modal" data-size="ui.Modal.Size.Large" data-backdrop="static">
         <div data-property="header">
             <div data-class="ui.Heading" data-size="4" data-text="Large Modal"></div>
         </div>
@@ -510,7 +559,7 @@
         </div>
     </div>
 
-    <div data-class="ui.Button" data-text="Toggle Large Modal" data-on-click="Josie.byId('large-modal').toggle();"></div>
+    <div data-class="ui.Button" data-text="Toggle Large Modal with static backdrop" data-on-click="Josie.byId('large-modal').toggle();"></div>
 </div>
 
 </body>
