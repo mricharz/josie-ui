@@ -6,7 +6,8 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Link', {
         href: 'string',
         name: 'string',
         target: 'string',
-        title: 'string'
+        title: 'string',
+        disabled: { type: 'boolean', defaultValue: false }
     },
 
     _renderControl: function() {
@@ -16,7 +17,12 @@ com.nysoft.josie.core.Control.extend('com.nysoft.josie.ui.Link', {
                 sName =  this.getName(),
                 sTarget = this.getTarget(),
                 sTitle = this.getTitle(),
+                bDisabled = this.getDisabled(),
                 sContent = '<a';
+
+            if(bDisabled) {
+                this.addCssClass('disabled');
+            }
 
             sContent += this.writeCssClasses();
             sContent += this.writeCssStyles();
